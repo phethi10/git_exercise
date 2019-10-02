@@ -1,0 +1,118 @@
+mkdir git-basic-exercise
+ls -a
+git init
+ls -a
+git status
+touch README.md
+ls -a
+git status
+git log
+git add README.md
+git status
+git rm README.md
+git status
+git add README.md
+git commit -m "initial commit"
+
+#more commits
+nano README.md
+cat README.md
+git status
+git commit -m "second commit"
+nano README.md
+git add README.md
+git commit -m "third commit"
+
+#check this out
+git log
+git checkout
+cat README.md
+git checkout master
+cat README .md
+
+#branching
+git branch master
+git branch milkshake-flavours
+git branch
+git branch
+cat milkshake-flavours
+nano milkshakes.md
+git status
+git commit -m "added initial flavours"
+git log
+git checkout master
+git branch history
+git log
+history > history.txt
+git commit -m "added history"
+git log
+git checkout milkshakes.md
+git log
+nano README.md
+git add README.md
+git commit -m "random readme changes"
+git checkout history
+cat README.md
+git rm README.md echo "booya" > README.md
+git add README.md
+commit -m "rewrote readme"
+git checkout master
+
+#just make sure we are still on track
+git checkout master
+ls
+git log
+git checkout milkshake-flavour
+ls
+git log
+git checkout history
+ls
+git log
+
+#merging
+git checkout master
+git merge milkshake-flavours
+ls
+git log
+git checkout master
+ls
+git log
+git checkout milkshake-flavours
+ls
+git log
+git checkout history
+git merge master
+git checkout master
+git log
+
+#pulling and remotes
+cd ../
+git clone $THE_URL_YOU_JUST_COPIED
+cd
+git branch
+git log
+git branch -a
+git checkout project/git-basic-exercise
+git remove -v
+
+#multiple repos
+git log
+git checkout git-basic-exercise
+git log
+cd
+mkdir this-will-be-another-repo
+git init
+touch README.md
+git checkout git-basic-exercise
+git log
+touch ignore-me.db
+git status
+nano .gitignore
+git status
+mkdir large-directory-that-should-be-local-only
+cd
+cd ..
+git status
+nano .gitignore
+git add /large-directory-that-should-be-local-only
+git status
